@@ -33,7 +33,7 @@ Crontab
 
 ### FORMAT
 
-For Brubeck:
+For Brubeck aggregator:
 ```plpgsql
 select pg_notify('channel_test', format(E'%s.%s:%s|%s\n', 
     metric_path, 
