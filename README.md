@@ -4,6 +4,8 @@
 
 Sending metrics in the socket (Brubeck, Graphite, etc.) from pg_notify chanel.
 
+It must be remembered, if a NOTIFY is executed inside a transaction, the notify events are not delivered until and unless the transaction is committed. This is appropriate, since if the transaction is aborted, all the commands within it have had no effect, including NOTIFY. But it can be disconcerting if one is expecting the notification events to be delivered immediately.
+
 ### INSTALLATION
 
 crontab
