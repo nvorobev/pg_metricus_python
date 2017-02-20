@@ -10,7 +10,7 @@ It must be remembered, if a NOTIFY is executed inside a transaction, the notify 
 
 crontab
 ```
-  * * * * *     /cron/pg_metricus.py -H 127.0.0.1 -P 5432 -D base -U user -W pass -A 10.9.5.164 -X 8124 -C metric
+* * * * *  pg_metricus.py -H 127.0.0.1 -P 5432 -D base -U user -W pass -A 10.9.5.164 -X 8124 -C test
 ```
 
 ### FORMAT
