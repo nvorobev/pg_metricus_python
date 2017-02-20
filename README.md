@@ -4,7 +4,7 @@
 
 Sending metrics in the socket (Brubeck, Graphite, etc.) from pg_notify chanel.
 
-### INSTALL
+### INSTALLATION
 
 crontab
 ```
