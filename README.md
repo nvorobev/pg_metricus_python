@@ -37,7 +37,7 @@ Crontab
 
 For Brubeck aggregator:
 ```plpgsql
-select pg_notify('channel_test', format(E'%s.%s:%s|%s\n', 
+select pg_notify('test', format(E'%s.%s:%s|%s\n', 
     metric_path, 
     metric_name, 
     metric_value, 
@@ -47,7 +47,7 @@ select pg_notify('channel_test', format(E'%s.%s:%s|%s\n',
 
 For Graphite:
 ```plpgsql
-select pg_notify('channel_test', format(E'%s.%s %s %s \n', 
+select pg_notify('test', format(E'%s.%s %s %s \n', 
     metric_path, 
     metric_name, 
     metric_value, 
@@ -71,7 +71,7 @@ begin
 
 	x2 = clock_timestamp();
 
-	perform pg_notify('channel_test', format(E'%s.%s:%s|%s\n', 
+	perform pg_notify('test', format(E'%s.%s:%s|%s\n', 
         'db.sql.metric', 
         'get_val_hstore_duration', 
         extract(millisecond from (x2 - x1))::bigint::text, 
